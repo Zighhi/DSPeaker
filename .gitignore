@@ -17,3 +17,6 @@ tools/
 Thumbs.db
 __pycache__/
 *.pyc
+
+# Editor settings (local only)
+.vscode/
