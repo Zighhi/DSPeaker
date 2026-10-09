@@ -1,0 +1,44 @@
+TS Parameters file
+Room EQ V5.31.3
+Dated: Jul 26, 2026 7:16:18 PM
+From measurement L Woofer 2 - Free Air Jul 26
+
+Zmin 5.73 ohm
+fmin 383 Hz
+f3 3191 Hz
+Le(f3) 0.195 mH
+Motional impedance parameters
+R0 25.59 ohm
+CMES 495.4 uF
+L0 2.816 mH
+beta 0.0542 
+omega0 1249.5 
+Blocked impedance parameters
+RDC 5.60 ohm
+dR -0.10 ohm
+Re 5.50 ohm
+Leb 0.0 uH
+Le 0.395 mH
+Rss 1562.3 ohm
+Ke 0.0595 S-H
+Thiele-Small parameters
+fs 132.5 Hz
+Qms 6.830
+Qes 2.268
+Qts 1.702
+Fts 77.8
+Mms 4.35 g
+Cms 0.332 mm/N
+Rms 0.530 kg/s
+Vas 0.92 litres
+Bl 2.962 Tm
+Eta 0.09 %
+Lp (1W/1m) 81.80 dB
+Dd 7.50 cm
+Sd 44.2 cm^2
+Added mass measurement: L Woofer 2 - Added Mass Jul 26
+Added mass 4.000 g
+Air temperature 20.0 C
+Air pressure 1013.25 mB
+Air density 1.2041 kg/m^3
+Speed of sound 343.2 m/s
