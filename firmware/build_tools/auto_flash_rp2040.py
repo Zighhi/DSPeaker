@@ -30,7 +30,7 @@ def main():
 
     print(f"Found RP2040 Bootloader Drive at: {drive}")
 
-    default_uf2 = r"E:\Projects\Speaker_rebuild\01_Firmware\rp2040_dsp\miXZer\build\miXZer.uf2"
+    default_uf2 = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "miXZer", "build", "miXZer.uf2")
     uf2_file = sys.argv[1] if len(sys.argv) > 1 else default_uf2
     if not os.path.exists(uf2_file):
         print(f"Error: UF2 file not found at {uf2_file}")

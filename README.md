@@ -82,6 +82,10 @@ firmware/
 │                   design_tools/ (LR4 coefficient calculator)
 └── build_tools/    auto_flash_rp2040.py — the UF2 flashing script actually used
 
+02_CAD_3D/
+├── Cabinet_STEP_Models/   STEP models of the cabinets, baffles and frames
+└── layout/                Perfboard layout (DIY Layout Creator) + PDF and netlist
+
 driver_measurements/   Measured Thiele-Small parameters for both woofers
 
 images/                 Build photos and the measured frequency response chart

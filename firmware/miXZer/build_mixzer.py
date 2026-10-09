@@ -7,17 +7,17 @@ import shutil
 import subprocess
 import sys
 
-# Paths
-PICO_SDK_PATH = "C:/Users/Zighi/.pico-sdk/sdk/2.2.0"
-PICOTOOL_BIN_PATH = "C:/Users/Zighi/.pico-sdk/picotool/2.2.0"
-TOOLCHAIN_PATH = "C:/Users/Zighi/.pico-sdk/toolchain/14_2_Rel1/bin"
-CMAKE_PATH = "C:/Users/Zighi/.pico-sdk/cmake/v3.31.5/bin/cmake.exe"
-NINJA_PATH = "C:/Users/Zighi/.pico-sdk/ninja/v1.12.1/ninja.exe"
+# Paths: defaults match the Raspberry Pi Pico VS Code extension's install under ~/.pico-sdk;
+# set PICO_SDK_ROOT to point somewhere else.
+PICO_ROOT = os.environ.get("PICO_SDK_ROOT", os.path.join(os.path.expanduser("~"), ".pico-sdk")).replace("\\", "/")
+PICO_SDK_PATH = PICO_ROOT + "/sdk/2.2.0"
+PICOTOOL_BIN_PATH = PICO_ROOT + "/picotool/2.2.0"
+TOOLCHAIN_PATH = PICO_ROOT + "/toolchain/14_2_Rel1/bin"
+CMAKE_PATH = PICO_ROOT + "/cmake/v3.31.5/bin/cmake.exe"
+NINJA_PATH = PICO_ROOT + "/ninja/v1.12.1/ninja.exe"
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 BUILD_DIR = os.path.join(PROJECT_DIR, "build")
-BUILD_TOOLS = os.path.join(os.path.dirname(PROJECT_DIR), "archive_rp2040", "build_tools")
-auto_flash_script = os.path.join(BUILD_TOOLS, "auto_flash_rp2040.py")
 
 # Environment
 os.environ["PATH"] = PICOTOOL_BIN_PATH + os.pathsep + TOOLCHAIN_PATH + os.pathsep + os.path.dirname(CMAKE_PATH) + os.pathsep + os.path.dirname(NINJA_PATH) + os.pathsep + os.environ.get("PATH", "")
